@@ -1,0 +1,70 @@
+/* Add some basic styling to the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Style the "Actions" cell */
+td.actions-cell {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Align the buttons to the end of the cell */
+}
+
+.table-container {
+  padding: 30px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Style the table header */
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #fff;
+  background-color: #9f70f0;
+  font-weight: bold;
+}
+
+/* Style the table rows */
+tr {
+  transition: background-color 0.2s ease;
+}
+
+tr:hover {
+  background-color: #f8f8f8;
+}
+
+/* Style the "Actions" column */
+td:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style the buttons in the "Actions" column */
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.edit-button {
+  background-color: #9b9b9b;
+  color: white;
+}
+
+button.delete-button {
+  background-color: #525252;
+  color: white;
+}
+
+button.add-button {
+  margin-bottom: 10px;
+  background-color: #673ab7;
+  color: white;
+}

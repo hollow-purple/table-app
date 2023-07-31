@@ -1,0 +1,30 @@
+<div class="table-container">
+  <button class="add-button" (click)="addEntryDialog()">Add New Entry</button>
+  <table matSort (matSortChange)="sortData($event)">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>ID</th>
+        <th mat-sort-header="title">Title</th>
+        <th>Completed</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataSource.data">
+        <td>{{ getUserRole(item.userId) }}</td>
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.completed ? "Completed" : "Not Completed" }}</td>
+        <td class="actions-cell">
+          <button class="edit-button" (click)="editEntryDialog(item)">
+            Edit
+          </button>
+          <button class="delete-button" (click)="deleteEntry(item.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
